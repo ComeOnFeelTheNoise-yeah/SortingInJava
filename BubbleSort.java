@@ -40,18 +40,20 @@ class BubbleSort {
 		System.out.println();
 	}
 
-	@Override
-	public String toString() {
-		return "Bubble Sort 전 : 7 3 5 2 6 1 4";
-	}
 	// main문
 	public static void main(String args[])
 	{
 		BubbleSort bs = new BubbleSort();
 		int arr[] = { 7, 3, 5, 2, 6, 1, 4 };
 		int n = arr.length;
-		System.out.println(bs);
+		//초기 배열을 출력
+		System.out.print("Bubble Sort 전 : ");
+		printArray(arr, n);
+		
+		//정렬 함수 실행
 		bubbleSort(arr, n);
+		
+		//정렬 함수 결과 출력
 		System.out.print("Bubble Sort 후 : ");
 		printArray(arr, n);
 	}
