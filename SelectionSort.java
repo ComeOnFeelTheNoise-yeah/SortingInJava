@@ -15,7 +15,7 @@ public class SelectionSort
 		{
 			
 			// min_idx는 0번 인덱스 부터 차례로 최소 요소를 찾기 위함
-			// min_idx가 따로 선언된 이유는 아래 temp에 설명
+			// min_idx가 따로 선언된 이유는 아래 3줄코드인 temp에 설명
 			int min_idx = i;
 			
 			// inner for : 정렬되지 않은 배열에서 최소 요소 찾기
