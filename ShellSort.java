@@ -1,6 +1,6 @@
 package Sort;
 
-//Shell Sort 의 Java 코드
+//Shell Sort 의 Java 코드 입니다.
 class ShellSort
 {
 	/* 크기가 n인 배열을 출력하는 유틸리티 함수*/
@@ -51,7 +51,8 @@ class ShellSort
 	// 구동 방법 : Driver method
 	public static void main(String args[])
 	{
-		int array[] = {12, 34, 54, 2, 3};
+		int array[] = { 7
+				, 3, 5, 2, 6, 1, 4 };
 		System.out.println("shell sorting 전");
 		printArray(array);
 
@@ -62,4 +63,3 @@ class ShellSort
 		printArray(array);
 	}
 }
-/*|출처| Rajat Mishra |수정| 한승주 */
