@@ -14,6 +14,7 @@ public class SelectionSort
 		for (int i = 0; i < n-1; i++)
 		{
 			// 정렬되지 않은 배열에서 최소 요소 찾기
+			// mid_idx는 0번 인덱스 부터 차례로 최소 요소를 찾기 위함
 			int min_idx = i;
 			for (int j = i+1; j < n; j++)
 				if (arr[j] < arr[min_idx])
