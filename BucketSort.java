@@ -53,18 +53,29 @@ class BucketSort {
 			}
 		}
 	}
+	
+	// Vector를 출력하는 함수
+		static void printArray(float[] arr)
+		{
+			for (float el : arr)
+				System.out.print(el + " ");
+			System.out.println();
+		}
 
 	// 구동 코드
 	public static void main(String args[])
 	{
-		float arr[] = { (float)0.897, (float)0.565,
-						(float)0.656, (float)0.1234,
-						(float)0.665, (float)0.3434 };
+		float arr[] = { (float)0.8, (float)0.5,
+						(float)0.7, (float)0.1,
+						(float)0.7, (float)0.3 };
+		
+		System.out.print("버킷 정렬 전 : ");
+		printArray(arr);
 
 		int n = arr.length;
 		bucketSort(arr, n);
 
-		System.out.println("Sorted array is ");
+		System.out.print("버킷 정렬 후 : ");
 		for (float el : arr) {
 			System.out.print(el + " ");
 		}
