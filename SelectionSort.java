@@ -13,13 +13,15 @@ public class SelectionSort
 		// n-1인 이유 : j가 n번까지 다음 인덱스로 있어야 때문
 		for (int i = 0; i < n-1; i++)
 		{
-			// inner for : 정렬되지 않은 배열에서 최소 요소 찾기
+			
 			// min_idx는 0번 인덱스 부터 차례로 최소 요소를 찾기 위함
 			// min_idx가 따로 선언된 이유는 아래 temp에 설명
+			int min_idx = i;
+			
+			// inner for : 정렬되지 않은 배열에서 최소 요소 찾기
 			// inner for문의 j는 다음인덱스를 뜻함, i를 비교하기 위해 쓰여짐
 			// inner for문이 다 돌고나서 outer for문이 돌기 떄문에
-			// 작은 수 인지 비교하면서 앞으로 보낼 수 있음
-			int min_idx = i;
+			// 전체 배열의 숫자를 비교하면서 가장 작은 수를 앞으로 보낼 수 있음
 			for (int j = i+1; j < n; j++)
 				if (arr[j] < arr[min_idx])
 					min_idx = j;
