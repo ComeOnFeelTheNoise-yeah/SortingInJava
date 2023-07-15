@@ -26,7 +26,7 @@ public class SelectionSort
 				if (arr[j] < arr[min_idx])
 					min_idx = j;
 
-			// 교체해주는 코드 3줄
+			// 가장작은수로 교체해주는 코드 3줄
 			// 찾은 최소 요소를 첫 번째 요소(element)로 교체
 			// 아닐경우엔 똑같은 값이 다시 들어감 min_idx = i
 			int temp = arr[min_idx];
