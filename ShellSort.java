@@ -1,6 +1,6 @@
 package Sort;
 
-//Shell Sort 의 Java 코드 입니다.
+//Shell Sort 의 Java 코드
 class ShellSort
 {
 	/* 크기가 n인 배열을 출력하는 유틸리티 함수*/
