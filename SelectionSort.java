@@ -1,6 +1,6 @@
 package Sort;
 
-//선택 정렬 구현을 위한 자바 프로그램
+// (작은 수 기준) 선택 정렬 구현을 위한 자바 프로그램
 import java.io.*;
 public class SelectionSort
 {
