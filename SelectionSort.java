@@ -13,7 +13,8 @@ public class SelectionSort
 		for (int i = 0; i < n-1; i++)
 		{
 			// 정렬되지 않은 배열에서 최소 요소 찾기
-			// mid_idx는 0번 인덱스 부터 차례로 최소 요소를 찾기 위함
+			// min_idx는 0번 인덱스 부터 차례로 최소 요소를 찾기 위함
+			// min_idx가 따로 선언된 이유는 아래 temp에 설명
 			// inner for문의 j는 다음인덱스를 뜻함, i를 비교하기 위해 쓰여짐
 			int min_idx = i;
 			for (int j = i+1; j < n; j++)
@@ -21,6 +22,7 @@ public class SelectionSort
 					min_idx = j;
 
 			// 찾은 최소 요소를 첫 번째 요소(element)로 교체
+			// 아닐경우엔 똑같은 값이 다시 들어감 min_idx = i
 			int temp = arr[min_idx];
 			arr[min_idx] = arr[i];
 			arr[i] = temp;
