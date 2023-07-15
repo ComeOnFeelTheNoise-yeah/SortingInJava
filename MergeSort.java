@@ -6,11 +6,13 @@ import java.io.*;
 class MergeSort {
 
 	// arr[]의 두 하위 배열을 병합
-	// 첫 번째 하위 배열은 arr[l..m]
-	// 두 번째 하위 배열은 arr[m+1..r]
+	// 첫 번째 하위 배열은 arr[l..m] l:left m:mid
+	// 두 번째 하위 배열은 arr[m+1..r] r:right
 	void merge(int arr[], int l, int m, int r)
 	{
 		// 병합할 두 하위 배열의 크기 찾기
+		// m - l + 1에 +1은 
+		// 예) 0~5까지 인덱스 갖은 배열 크기 = 6
 		int n1 = m - l + 1;
 		int n2 = r - m;
 
@@ -29,7 +31,7 @@ class MergeSort {
 		// 첫 번째 및 두 번째 하위 배열의 초기 인덱스
 		int i = 0, j = 0;
 
-		// 첫 번째 및 두 번째 하위 배열의 초기 인덱스
+		// 병합된 하위 배열의 초기 인덱스
 		int k = l;
 		while (i < n1 && j < n2) {
 			if (L[i] <= R[j]) {
