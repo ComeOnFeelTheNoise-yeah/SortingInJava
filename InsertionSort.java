@@ -12,6 +12,8 @@ public class InsertionSort {
 
 			/* arr[0..i-1]의 요소를 이동
 			키보다 큼, 현재 위치의 한 위치 앞으로*/
+			//while이 사용된 이유: 조건에 해당될떄만
+			//반복 하기 위함
 			while (j >= 0 && arr[j] > key) {
 				arr[j + 1] = arr[j];
 				j = j - 1;
