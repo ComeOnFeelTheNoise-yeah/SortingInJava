@@ -8,7 +8,6 @@ package Sort;
    최적화된 버블 정렬 : 한 번의 완전한 반복을 
    수행할 때마다 가장 큰 요소가 배열의 마지막으로 이동
    
-   이해 안되면 코드 ㄱㄱ
    */
 
 /* 참고 ! BubbleSort의 코드 내의 method들이 static 으로 선언됨
@@ -39,9 +38,17 @@ class BubbleSort {
 	static void bubbleSort(int arr[], int n)
 	{
 		int i, j, temp;
+		//swapped : 교환, 바꾼의 의미로
+		// 바꾼것 = true or false
 		boolean swapped;
+		
+		//outer loop : SelectionSort와 마찬가지로
+		// n - 1 이전 까지만 반복
 		for (i = 0; i < n - 1; i++) {
+			//바꾸지 않음
 			swapped = false;
+			// inner loop : n - i -1 은 
+			// 현재 정렬되지 않은 부분의 마지막 요소의 인덱스
 			for (j = 0; j < n - i - 1; j++) {
 				if (arr[j] > arr[j + 1]) {
 					
@@ -53,7 +60,8 @@ class BubbleSort {
 				}
 			}
 
-			// 두 개의 요소가 없는 경우
+			// 두 개의 요소가 없는 경우 : 정렬된 상태
+			// inner loop의 if문에 들어가지 못한 상태
 			// 내부 루프에 의해 교체된 후 중단
 			if (swapped == false)
 				break;
