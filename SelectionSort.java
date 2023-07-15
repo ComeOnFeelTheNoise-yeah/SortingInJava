@@ -4,6 +4,7 @@ package Sort;
 import java.io.*;
 public class SelectionSort
 {
+	//sort method
 	void sort(int arr[])
 	{
 		int n = arr.length;
