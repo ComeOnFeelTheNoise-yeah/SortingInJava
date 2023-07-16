@@ -67,7 +67,7 @@ class MergeSort {
 		if (l < r) {
 
 			// 중간점 찾기
-			int m = (l + r) / 2;
+			int m = l + (r - l) / 2;
 
 			// 전반부와 후반부 정렬
 			sort(arr, l, m);
