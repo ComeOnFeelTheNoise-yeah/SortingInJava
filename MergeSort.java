@@ -11,8 +11,6 @@ class MergeSort {
 	void merge(int arr[], int l, int m, int r)
 	{
 		// 병합할 두 하위 배열의 크기 찾기
-		// m - l + 1에 +1은 
-		// 예) 0~5까지 인덱스 갖은 배열 크기 = 6
 		int n1 = m - l + 1;
 		int n2 = r - m;
 
@@ -32,6 +30,8 @@ class MergeSort {
 		int i = 0, j = 0;
 
 		// 병합된 하위 배열의 초기 인덱스
+		// 새로운 요소가 삽입되어야 할 위치를 가리키는 역할
+		// 병합 과정에서 작은 요소를 원래 배열에 복사하는 위치를 지정
 		int k = l;
 		while (i < n1 && j < n2) {
 			if (L[i] <= R[j]) {
@@ -63,10 +63,11 @@ class MergeSort {
 	// merge()를 사용하여 arr[l..r]을 정렬하는 메인 함수
 	void sort(int arr[], int l, int r)
 	{
+		//같거나 작으면 배열에 한 값만있어 sort할 필요 없거나 이상한 것
 		if (l < r) {
 
 			// 중간점 찾기
-			int m = l + (r - l) / 2;
+			int m = (l + r) / 2;
 
 			// 전반부와 후반부 정렬
 			sort(arr, l, m);
@@ -89,7 +90,7 @@ class MergeSort {
 	// 구동 코드
 	public static void main(String args[])
 	{
-		int arr[] = { 12, 11, 13, 5, 6, 7 };
+		int arr[] = { 4, 7, 2, 5, 3, 1, 6 };
 
 		System.out.print("MergeSort Sort 전 : ");
 		printArray(arr);
@@ -102,6 +103,6 @@ class MergeSort {
 	}
 }
 
-/*	MergeSort Sort 전 : 12 11 13 5 6 7 
-	MergeSort Sort 후 : 5 6 7 11 12 13 
+/*	MergeSort Sort 전 : 4 7 2 5 3 1 6 
+	MergeSort Sort 후 : 1 2 3 4 5 6 7 
  */
