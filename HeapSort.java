@@ -1,7 +1,9 @@
 package Sort;
 
 // Heap Sort를 구현한 Java 프로그램
-
+// 장점 : 힙 정렬은 시간복잡도가 최선, 평균, 최악 모두
+// O ( n l o g n ) O(nlogn) O(nlogn)인데다,
+// 추가 메모리 할당도 없는 이론적으론 이상적인 알고리즘
 public class HeapSort {
 
 	// 힙 정렬 메소드
@@ -61,6 +63,9 @@ public class HeapSort {
 
 	// 구동 방법: Driver method
 	public static void main(String args[]) {
+		
+		long beforeTime = System.currentTimeMillis(); // 코드 실행 전에 시간 받아오기
+		
 		int arr[] = { 7, 3, 5, 2, 6, 1, 4 };
 		int N = arr.length;
 
@@ -73,5 +78,14 @@ public class HeapSort {
 
 		System.out.print("Heap Sort 후: ");
 		printArray(arr);
+		
+		long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
+		long diffTime = afterTime - beforeTime; // 두 개의 실행 시간
+		System.out.println("실행 시간(ms): " + diffTime); // 세컨드(초 단위 변환)
 	}
 }
+
+/*	Heap Sort 전: 7 3 5 2 6 1 4 
+	Heap Sort 후: 1 2 3 4 5 6 7 
+	실행 시간(ms): 2
+*/
