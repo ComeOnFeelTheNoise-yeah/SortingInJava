@@ -1,6 +1,9 @@
 package Sort;
 
 // Shell Sort의 Java 코드입니다.
+// 장점 : 연속적이지 않은 부분 리스트에서 자료의 교환이 일어나면 더 큰 거리를 이동함
+// 따라서 교환되는 요소들이 삽입 정렬보다는 최종 위치에 있을 가능성이 높아짐
+
 class ShellSort {
 	/* 크기가 n인 배열을 출력하는 유틸리티 함수 */
 	static void printArray(int array[]) {
@@ -39,14 +42,28 @@ class ShellSort {
 
 	// 구동 방법: Driver method
 	public static void main(String args[]) {
+		
+		long beforeTime = System.currentTimeMillis(); // 코드 실행 전에 시간 받아오기
+		
 		int array[] = { 7, 3, 5, 2, 6, 1, 4 };
-		System.out.println("Shell Sort 전");
+		System.out.print("Shell Sort 전 : ");
 		printArray(array);
 
 		ShellSort ob = new ShellSort();
 		ob.sort(array);
 
-		System.out.println("Shell Sort 후");
+		System.out.print("Shell Sort 후 : ");
 		printArray(array);
+		
+		long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
+		long diffTime = afterTime - beforeTime; // 두 개의 실행 시간
+		System.out.println("실행 시간(ms): " + diffTime); // 세컨드(초 단위 변환)
 	}
 }
+
+/*	Shell Sort 전 : 7 3 5 2 6 1 4 
+	Shell Sort 후 : 1 2 3 4 5 6 7 
+	실행 시간(ms): 1
+	
+	MergeSort나 HeapSort보다 빠르게 나옴
+*/
